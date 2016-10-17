@@ -1,0 +1,11 @@
+<!-- <ul>
+  <li ng-repeat= "items in narrowed.found"> {{items.name}},  {{items.short_name}}, {{items.description}} <button class="btn btn-default" ng-click='narrowed.remove(item)'><span class="glyphicon glyphicon-ok"></span> Don't want this one! </button><li>
+</ul> -->
+<div class="nav navbar-nav navbar-right">
+ <ol>
+  <li ng-repeat="item in items.found">
+    {{item.name}}, {{item.short_name}}, {{item.description}}
+    <button class="btn btn-default" ng-click="onRemove({index: $index});">Don't want this one!</button>
+  </li>
+</ol>
+</div>
