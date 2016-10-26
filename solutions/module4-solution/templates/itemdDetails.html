@@ -1,0 +1,6 @@
+<h2> ItemContentList </h2>
+<ul>
+  <li ng-repeat="item in $ctrl.itemContent" ui-sref="itemDetail({itemId: $index})">
+     {{ item.id }} of {{ item.name }}
+  </li>
+</ul>
