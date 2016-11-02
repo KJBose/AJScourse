@@ -1,0 +1,24 @@
+<div class="container">
+  <h2 id="menu-categories-title" class="text-center">My Info</h2>
+  <div class="text-center" ng-if="myinfoCtrl.userNotexist">
+    Not Signed Up Yet. <a ui-sref="public.signup"> Sign up Now! </a>
+  </div>
+
+  <div class="text-center" ng-if="myinfoCtrl.userexist">
+      <h3> FirstName: </h3> </a> <span> {{myinfoCtrl.userInfo.firstname}} </span>
+      <h3> LasstName: </h3> </a> <span> {{myinfoCtrl.userInfo.lastname}} </span>
+      <h3> Email: </h3> </a> <span> {{myinfoCtrl.userInfo.email}} </span>
+      <h3> Ph Number: </h3> </a> <span> {{myinfoCtrl.userInfo.phonenumber}} </span>
+
+  <h1> {{myinfoCtrl.userInfo.firstname}} {{myinfoCtrl.userInfo.lastname}} favorite Dish </h1>
+  
+  <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+    <a ui-sref="public.menuitems({category: myinfoCtrl.userInfo.favdish})">
+      <div class="category-tile">
+        <img width="200" height="200" ng-src="images/menu/{{myinfoCtrl.userInfo.favdish}}/{{myinfoCtrl.userInfo.favdish}}.jpg" alt="{{myinfoCtrl.userInfo.category.name}}">
+        <span>{{myinfoCtrl.userInfo.category.name}}</span>
+      </div>
+    </a>
+  </div>
+  </div>
+</div>
